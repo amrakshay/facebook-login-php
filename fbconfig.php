@@ -31,14 +31,14 @@ if ( isset( $session ) ) {
   $response = $request->execute();
   // get response
   $graphObject = $response->getGraphObject();
-     	$fbid = $graphObject->getProperty('id');              // To Get Facebook ID
- 	    $fbfullname = $graphObject->getProperty('name'); // To Get Facebook full name
-	    $femail = $graphObject->getProperty('email');    // To Get Facebook email ID
-	/* ---- Session Variables -----*/
-	    $_SESSION['FBID'] = $fbid;           
-        $_SESSION['FULLNAME'] = $fbfullname;
-	    $_SESSION['EMAIL'] =  $femail;
-    /* ---- header location after session ----*/
+      $fbid = $graphObject->getProperty('id');              // To Get Facebook ID
+      $fbfullname = $graphObject->getProperty('name'); // To Get Facebook full name
+      $femail = $graphObject->getProperty('email');    // To Get Facebook email ID
+      /* ---- Session Variables -----*/
+      $_SESSION['FBID'] = $fbid;           
+      $_SESSION['FULLNAME'] = $fbfullname;
+      $_SESSION['EMAIL'] =  $femail;
+      /* ---- header location after session ----*/
   header("Location: index.php");
 } else {
   $loginUrl = $helper->getLoginUrl();

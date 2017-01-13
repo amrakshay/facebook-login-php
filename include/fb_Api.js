@@ -51,23 +51,22 @@ document.getElementById('loginBtn').addEventListener('click', function() {
     }, {scope: 'email,user_photos,user_videos', return_scopes: true});
 }, false);
 
-
 function fbLogout() {
     FB.logout(function(){document.location.reload();});
 }
-function checkUser(fb_id,fb_name,fb_email) {
-    var id = fb_id;
-    var name = fb_name;
-    var email = fb_email;
-    console.log(name+email+id);
 
-    $.post('check_user.php',{id:id,name:name,email:email},
+function checkUser(fb_id,fb_name,fb_email) {
+    var postData = {
+        id: fb_id,
+        name: fb_name,
+        email: fb_email
+    };
+
+    $.post('check_user.php', postData,
         function (response) {
-            console.log(response);
             if(response == 0)
                 console.log('Error');
             else if(response == 1)
                 console.log(response);
         });
-
 }

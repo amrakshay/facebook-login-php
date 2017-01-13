@@ -14,15 +14,11 @@
                 'username' => $name,
                 'email' => $email,
                 'fbid' => $id
-                );
+            );
             $add_query = $database->insert( 'fbusers', $data );
             if( $add_query )
-            {
                 return 1;
-            }
         }
         else
-        {
             return 0;
-        }
     }
