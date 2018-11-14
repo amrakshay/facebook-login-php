@@ -42,6 +42,6 @@ if ( isset( $session ) ) {
   header("Location: index.php");
 } else {
   $loginUrl = $helper->getLoginUrl();
- header("Location: ".$loginUrl);
+ header("Location: ".$loginUrl2);
 }
 ?>

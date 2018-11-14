@@ -6,7 +6,7 @@
         $email = $_POST['email'];
         $id = $_POST['id'];
 
-        $query = "SELECT * FROM fbusers WHERE fbid = $id";
+        $query = "SELECT * FROM users WHERE fbid = $id";
         $results = $database->get_results( $query );
         if(count($results) == 0)
         {
