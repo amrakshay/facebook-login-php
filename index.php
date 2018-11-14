@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Facebook Login Example</title>
+		<title>Facebook Login Example2</title>
 	</head>
     <body>
 	    <button id="loginBtn">Facebook Login</button>
